@@ -19,5 +19,12 @@ console.log(newstring);
 
 const newname = "   rahul    ";
 console.log(newname);
-console.log(newname.trim());//(removes the extra space of the sting)
+console.log(newname.trim());//(removes the extra space of the sting)   
+
+const url = "https://www.google.com/?zx=1790774603838"
+
+console.log(url.replace('?zx', '-'))
+
+console.log(url.includes('sundar'))
+
 

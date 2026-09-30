@@ -1,7 +1,7 @@
 let name = "jatin"
 let age = " 18"
-let dist;//  result undefined(because we have not assigned any value to dist variable)
-
+let dist;//  result undefined(because we have not assigned any value to dist variable)  
+    
 console.log(name)
 console.log(age)
 console.log(dist)
