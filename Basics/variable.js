@@ -21,4 +21,4 @@ city = "jaipur"// we can reassign a value to a variable declared with var
 console.log(city)
 
 // most of the time we use let and const instead of var because var has some 
-// issues with scoping and hoisting  
+// issues with scoping and hoisting   
