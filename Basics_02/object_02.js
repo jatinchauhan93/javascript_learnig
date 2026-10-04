@@ -62,7 +62,7 @@ const student = [
 
 console.log(student[1].name)
 
-// descusntructing of object
+// destructuring of object
 
 const course = {
     coursename: "js in hindi",
