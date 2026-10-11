@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="naam">
+        <div class="fname">
+            <h1 id = "123" >sumit</h1>
+        </div>
+        <div class="lname">
+            <h1 id = "34">Lafadiya</h1>
+        </div>
+    </div>
+</body>
+<script>
+//   const  name = document.getElementsByClassName('naam')
+//   console.log(name)
+//   console.log(name[0].children)
+
+  name[0].children[0].children[0].innerHTML = "rahul";
+  // not good thing just  for pratice  we can  also do this 
+
+   const name =document.getElementById('123')
+    name.innerHTML= 'amit';
+  
+
+  name.style.color = "red"
+  const school=document.getElementsByClassName('naam')
+  console.log(school[0].firstElementChild )
+  console.log(school[0].lastElementChild)
+
+  const query = document.querySelector('#123')
+
+  query.innerHTML  = "babita";
+console.log("NODES: ", query.childNodes);
+
+</script>
+</html>
