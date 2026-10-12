@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Project 01</h1>
+    <button id = "stop"> stop</button>
+</body>
+<script>
+     const sayhello = () => {
+    console.log("jatin");
+};
+const  changetext = ()=>{
+    document.querySelector('h1').innerHTML="best js i  am learning";
+}
+
+        const changeMe = setTimeout(changetext, 2000);
+
+  
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log('stopped')
+    })
+    //  it  mostly use to perform certain operation only one time 
+
+</script>
+</html>
