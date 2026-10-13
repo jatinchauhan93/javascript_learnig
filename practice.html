@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            width: 200px;
+            padding: 20px;
+            margin: 10px 0;
+            background-color: lightblue;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">JavaScript DOM Practice</h1>
+
+    <p class="message">Hello, World!</p>
+
+    <div class="box">I am a box</div>
+
+    <button id="changeText">Change Text</button>
+    <button id="changeColor">Change Color</button>
+
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+    <script>
+       console.log( document.getElementById("heading"))
+       const msg = document.getElementById("changeText")
+        msg.addEventListener('click',function(){
+           document.body.style.backgroundColor = '#212121';
+            document.body.style.color = 'white';
+        })
+
+        const name = document.getElementById("changeColor")
+        name.addEventListener('click' ,function(){
+           document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+        })
+
+        cosnt 
+
+    </script>
+
+</body>
+</html>
