@@ -1,34 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 02</title>
 </head>
 <body>
-    <h1>Welcome to Project 02</h1>
-    <button id = "start">start</button>
-    <button id = "stop"> stop</button>
-</body>
-<script>
-    let  intervalid;
-    document.querySelector("#start").addEventListener('click',function(){
-         intervalid = setInterval(saydate,2000);
-    })
-       const saydate = function(){
-            console.log("jatin",Date.now())
-        }
-        // const intervalid = setInterval(saydate,2000);
-        //  clearInterval(intervalid)
 
-         document.querySelector("#stop").addEventListener('click',function(){
-            clearInterval(intervalid)
-            console.log('stopped')
-         })
-        //  const saydate = function(str){
-        //     console.log("jatin",Date.now(),str)
-        // }
-        // setInterval(saydate,2000,"hii"); it can also take the third  parameter to performm operation 
-    //    setInterval is mainly use perticular operatin afer a certain time just like after one or  two second 
-</script>
+    <h1>Welcome to Project 02</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let intervalid = null;
+
+        const saydate = function() {
+            console.log("jatin", Date.now());
+        };
+
+        document.querySelector("#start").addEventListener("click", function() {
+
+            if (intervalid === null) {
+                intervalid = setInterval(saydate, 2000);
+                console.log("Timer started");
+            } else {
+                console.log("Timer is already running");
+            }
+
+        });
+
+        document.querySelector("#stop").addEventListener("click", function() {
+
+            if (intervalid !== null) {
+                clearInterval(intervalid);
+                intervalid = null;
+                console.log("Timer stopped");
+            } else {
+                console.log("No timer is running");
+            }
+
+        });
+    </script>
+
+</body>
 </html>
