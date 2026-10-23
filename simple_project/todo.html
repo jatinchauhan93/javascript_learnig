@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+    <div class="todo-container">
+
+      
+        <header class="todo-header">
+            <h1>Todo App</h1>
+            <p>Stay organized, get things done!</p>
+        </header>
+
+        
+        <form class="todo-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What needs to be done?"
+            >
+
+            <button type="submit" class="add-btn">
+                + Add
+            </button>
+        </form>
+
+      
+        <ul class="task-list">
+
+           
+            <li class="task-item">
+                <div class="task-content">
+                    <input type="checkbox">
+                    <span>Learn HTML and CSS</span>
+                </div>
+
+                <div class="task-actions">
+                    <button class="edit-btn" aria-label="Edit task">✎</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑</button>
+                </div>
+            </li>
+
+         
+            <li class="task-item">
+                <div class="task-content">
+                    <input type="checkbox">
+                    <span>Practice JavaScript</span>
+                </div>
+
+                <div class="task-actions">
+                    <button class="edit-btn" aria-label="Edit task">✎</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑</button>
+                </div>
+            </li>
+
+            
+            <li class="task-item completed">
+                <div class="task-content">
+                    <input type="checkbox" checked>
+                    <span>Complete my first project</span>
+                </div>
+
+                <div class="task-actions">
+                    <button class="edit-btn" aria-label="Edit task">✎</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑</button>
+                </div>
+            </li>
+
+   
+            <li class="task-item">
+                <div class="task-content">
+                    <input type="checkbox">
+                    <span>Learn DOM manipulation</span>
+                </div>
+
+                <div class="task-actions">
+                    <button class="edit-btn" aria-label="Edit task">✎</button>
+                    <button class="delete-btn" aria-label="Delete task">🗑</button>
+                </div>
+            </li>
+
+        </ul>
+
+    
+        <footer class="todo-footer">
+            <p>4 tasks remaining</p>
+            <button class="clear-btn">Clear completed</button>
+        </footer>
+
+    </div>
+
+</body>
+</html>
