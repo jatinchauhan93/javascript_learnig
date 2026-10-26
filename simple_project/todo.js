@@ -5,18 +5,17 @@ const taskList = document.querySelector(".task-list");
 const taskCount = document.querySelector(".todo-footer p");
 const clearBtn = document.querySelector(".clear-btn");
 
-// Load previously saved tasks
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Track which task is being edited
+
 let editingId = null;
 
-// Save tasks to localStorage
+
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Display all tasks on the page
+
 function renderTasks() {
     taskList.innerHTML = "";
 
@@ -51,14 +50,13 @@ function renderTasks() {
         deleteBtn.textContent = "🗑";
         deleteBtn.setAttribute("aria-label", "Delete task");
 
-        // Mark task as completed
         checkbox.addEventListener("change", () => {
             task.completed = checkbox.checked;
             saveTasks();
             renderTasks();
         });
 
-        // Edit task
+      
         editBtn.addEventListener("click", () => {
             taskInput.value = task.text;
             editingId = task.id;
@@ -67,7 +65,7 @@ function renderTasks() {
             document.querySelector(".add-btn").textContent = "Update";
         });
 
-        // Delete task
+  
         deleteBtn.addEventListener("click", () => {
             tasks = tasks.filter((item) => item.id !== task.id);
 
@@ -85,21 +83,18 @@ function renderTasks() {
         taskList.appendChild(li);
     });
 
-    // Update remaining task count
     const remaining = tasks.filter((task) => !task.completed).length;
 
     taskCount.textContent =
         `${remaining} task${remaining === 1 ? "" : "s"} remaining`;
 }
 
-// Reset the input after adding or editing
 function resetForm() {
     taskInput.value = "";
     editingId = null;
     document.querySelector(".add-btn").textContent = "+ Add";
 }
 
-// Add or update task
 taskForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -111,14 +106,12 @@ taskForm.addEventListener("submit", (event) => {
     }
 
     if (editingId !== null) {
-        // Update existing task
         const task = tasks.find((item) => item.id === editingId);
 
         if (task) {
             task.text = taskText;
         }
     } else {
-        // Add new task
         const newTask = {
             id: crypto.randomUUID(),
             text: taskText,
@@ -133,7 +126,6 @@ taskForm.addEventListener("submit", (event) => {
     renderTasks();
 });
 
-// Remove all completed tasks
 clearBtn.addEventListener("click", () => {
     tasks = tasks.filter((task) => !task.completed);
 
@@ -146,5 +138,4 @@ clearBtn.addEventListener("click", () => {
     renderTasks();
 });
 
-// Display saved tasks when page loads
 renderTasks();
